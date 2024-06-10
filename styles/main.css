@@ -78,6 +78,7 @@ img {
 }
 
 .headerLogo {
+  flex-shrink: 0;
   width: 4rem;
   height: 4rem;
   overflow: hidden;
@@ -99,6 +100,7 @@ img {
   display: flex;
   gap: 1rem;
   background: var(--dark);
+  overflow: auto;
 }
 
 .navLink {
@@ -118,4 +120,32 @@ img {
   display: inline-block;
   margin-left: auto;
   color: var(--grey);
+}
+
+@media (max-width: 766px) {
+  .container {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .block {
+    padding: 0.5rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+  }
+
+  .navLink {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .headerText {
+    font-size: 1rem;
+  }
 }

@@ -47,3 +47,36 @@
   padding-top: 0;
   border-bottom: 1px dashed var(--light);
 }
+
+@media (max-width: 766px) {
+  .card {
+    gap: 0.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .cardInfo {
+    grid-template-columns: 1fr;
+    overflow: hidden;
+  }
+
+  .cardInfo .image {
+    max-height: 20rem;
+    width: max-content;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .info {
+    max-width: 100%;
+    overflow: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .cardInfo .image {
+    width: 100%;
+  }
+}
