@@ -32,13 +32,20 @@
   gap: 1rem;
 }
 
-.infoItem > * {
-  padding: 1rem 0.5rem;
+.infoItems {
+  display: grid;
+  gap: 1rem;
+}
+
+.infoItem {
+  display: grid;
+  grid-template-columns: 12rem 1fr;
+  gap: 1rem;
+  padding: 0.5rem;
   line-height: 1.25;
 }
 
 .title {
-  max-width: 15rem;
   text-align: right;
   font-weight: 500;
 }
@@ -72,6 +79,13 @@
   .info {
     max-width: 100%;
     overflow: auto;
+  }
+
+  .infoItem {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    justify-items: start;
+    gap: 0.5rem;
   }
 }
 
