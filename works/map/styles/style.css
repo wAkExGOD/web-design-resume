@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 64px;
+	padding: 32px;
+	margin: 0 auto;
+}
+
+table {
+	border-collapse: collapse;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+.cell {
+	padding: 16px;
+	border: 1px solid black;
+}
+
+.color {
+	width: 60px;
+	height: 30px;
+	padding: 0;
+}
+
+.row.scotland .color {
+	background: #feecaa;
+}
+.row.ireland .color {
+	background: #f2e1d3;
+}
+.row.wales .color {
+	background: #ccdb8a;
+}
+.row.england .color {
+	background: #ffd3e4;
+}

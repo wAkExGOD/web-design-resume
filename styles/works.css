@@ -31,6 +31,8 @@
 
 .workTitle {
   font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--white);
 }
 
 .workTags {

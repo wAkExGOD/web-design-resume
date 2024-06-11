@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <h1>Form</h1>
+    <form>
+      <label for="title">Название</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        placeholder="123-ABC/abc{45}"
+        pattern="[\d]{3}-[A-Z]{3}\/[a-z]{3}\{[\d]{2}\}"
+        required
+      />
+
+      <label for="name">Имя</label>
+      <input type="text" name="name" id="name" autocomplete="given-name" />
+
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="color">Цвет</label>
+      <input type="color" name="color" id="color" />
+
+      <label for="quantity">Количество</label>
+      <input
+        type="number"
+        name="quantity"
+        id="quantity"
+        min="0"
+        step="10"
+        required
+      />
+
+      <label for="date">Дата / время</label>
+      <input type="datetime-local" name="date" id="date" required />
+
+      <fieldset class="delivery_way">
+        <legend>Способ доставки</legend>
+        <label>
+          <input
+            type="checkbox"
+            name="delivery_way"
+            id="delivery_way_self"
+            value="self"
+            checked
+          />
+          Самовывоз
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="delivery_way"
+            id="delivery_way_company"
+            value="company"
+          />
+          Курьером
+        </label>
+      </fieldset>
+
+      <label for="pickup_place">Ближайший пункт самовывоза</label>
+      <select name="pickup_place" id="pickup_place" required>
+        <option value="" selected="selected">Выберите</option>
+        <option value="brest">Брест</option>
+        <option value="vitebsk">Витебск</option>
+        <option value="gomel">Гомель</option>
+        <option value="grodno">Гродно</option>
+        <option value="minsk">Минск</option>
+        <option value="mogilev">Могилёв</option>
+      </select>
+
+      <fieldset class="delivery_type">
+        <legend>Вид доставки</legend>
+        <div class="container">
+          <label>
+            <div>
+              <img src="./images/1.jpg" alt="delivery_type_1">
+            </div>
+            <input
+              type="radio"
+              name="delivery_type"
+              id="delivery_type_1"
+              value="1"
+              required
+            />
+          </label>
+          <label>
+            <div>
+              <img src="./images/2.jpg" alt="delivery_type_2">
+            </div>
+            <input
+              type="radio"
+              name="delivery_type"
+              id="delivery_type_2"
+              value="2"
+              required
+            />
+          </label>
+          <label>
+            <div>
+              <img src="./images/3.png" alt="delivery_type_3">
+            </div>
+            <input
+              type="radio"
+              name="delivery_type"
+              id="delivery_type_3"
+              value="3"
+              required
+            />
+          </label>
+        </div>
+      </fieldset>
+
+      <input type="submit" value="Заказать" />
+    </form>
+  </body>
+</html>
